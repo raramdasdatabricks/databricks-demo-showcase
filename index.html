@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Databricks Demo Showcase — Governed AI, Agents & Apps</title>
+  <meta name="description" content="A curated set of short Databricks demos: production AI agents, user-facing apps, quality & observability, and the governance that keeps it all compliant." />
+
+  <!-- Open Graph (nice link previews when shared) -->
+  <meta property="og:title" content="Databricks Demo Showcase" />
+  <meta property="og:description" content="See governed AI, agents, and apps come to life on Databricks." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Databricks <span class="brand-sub">Demo Showcase</span></span>
+      </a>
+      <nav class="header-nav">
+        <a href="#demos">Demos</a>
+        <a href="#contact" class="btn btn-ghost btn-sm">Contact your team</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow" id="hero-eyebrow"></p>
+        <h1 id="hero-headline"></h1>
+        <p class="hero-subhead" id="hero-subhead"></p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" id="hero-primary-cta"></a>
+          <a class="btn btn-ghost" id="hero-secondary-cta" target="_blank" rel="noopener"></a>
+        </div>
+        <ul class="hero-stats" aria-label="What you'll see">
+          <li><span class="stat-key">AI agents</span><span class="stat-val">Built &amp; governed</span></li>
+          <li><span class="stat-key">Quality</span><span class="stat-val">Evaluated &amp; monitored</span></li>
+          <li><span class="stat-key">Governance</span><span class="stat-val">Unified by default</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED ============ -->
+    <section class="section section-featured" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="featured-title">Featured demos</h2>
+          <p class="section-sub">Start here — the highest-impact stories across AI, apps, and governance.</p>
+        </div>
+        <div class="featured-grid" id="featured-grid"></div>
+      </div>
+    </section>
+
+    <!-- ============ ALL DEMOS + FILTERS ============ -->
+    <section class="section" id="demos" aria-labelledby="demos-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="demos-title">Browse all demos</h2>
+          <p class="section-sub">Filter by the outcome you care about.</p>
+        </div>
+        <div class="filters" id="filters" role="tablist" aria-label="Filter demos by category"></div>
+        <div class="card-grid" id="card-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>No demos in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section section-cta" id="contact" aria-labelledby="cta-title">
+      <div class="container cta-inner">
+        <h2 id="cta-title">Ready to see this on your data?</h2>
+        <p>Every demo here can be tailored to your environment, your governance model, and your business outcomes.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary" href="mailto:rajesh.ramdas@databricks.com?subject=Request%20a%20deeper%20Databricks%20demo">Request a deeper demo</a>
+          <a class="btn btn-ghost-light" href="https://www.databricks.com/product/data-intelligence-platform" target="_blank" rel="noopener">Explore the full platform story</a>
+          <a class="btn btn-ghost-light" href="mailto:rajesh.ramdas@databricks.com?subject=Connect%20with%20my%20Databricks%20team">Contact your Databricks team</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="brand-mark small" aria-hidden="true"></span>
+      <p class="footer-copy">Databricks Demo Showcase &middot; Prepared for customer discussions.</p>
+      <p class="footer-note">Demonstration material for evaluation purposes. Validate any approach against your own requirements before production use.</p>
+    </div>
+  </footer>
+
+  <!-- ============ MODAL (click-to-play) ============ -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" data-close aria-label="Close">&times;</button>
+      <div class="modal-media" id="modal-media"></div>
+      <div class="modal-body">
+        <span class="badge" id="modal-category"></span>
+        <h3 id="modal-title"></h3>
+        <p class="modal-summary" id="modal-summary"></p>
+        <dl class="modal-meta">
+          <div><dt>Why it matters</dt><dd id="modal-why"></dd></div>
+          <div><dt>Business problem it solves</dt><dd id="modal-problem"></dd></div>
+          <div><dt>Who cares</dt><dd id="modal-audience"></dd></div>
+        </dl>
+        <a class="btn btn-primary btn-sm" href="mailto:rajesh.ramdas@databricks.com?subject=Deeper%20demo%20request">Request a deeper demo</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
